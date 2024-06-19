@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Bisect Redirect</title>
-<meta http-equiv="refresh" content="0;url=https://bisecthosting.com/Bennyboy1695">
+    <meta charset="UTF-8">
+    <title>Bisect Redirect</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const redirectUrl = params.get('url');
+            if (redirectUrl) {
+                window.location.href = redirectUrl;
+            } else {
+                document.body.innerHTML = '<h1>No URL provided to redirect to.</h1>';
+            }
+        });
+    </script>
 </head>
 <body>
-<h3>Redirecting because of UBlock twattery</h3>
-<p>If you are not automatically redirected click this link:</p>
-<a href="https://bisecthosting.com/Bennyboy1695">https://bisecthosting.com/Bennyboy1695</a>
+    <h3>Redirecter because of UBlock twattery</h3>
 </body>
 </html>
